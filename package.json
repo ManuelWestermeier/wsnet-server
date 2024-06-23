@@ -1,0 +1,22 @@
+{
+  "name": "wsnet-server",
+  "version": "1.0.3",
+  "description": "A fast realtime websocket framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "websocket",
+    "libary",
+    "realtime",
+    "easy",
+    "server"
+  ],
+  "type": "module",
+  "author": "Manuel Westermeier",
+  "license": "ISC",
+  "dependencies": {
+    "ws": "^8.16.0"
+  }
+}
