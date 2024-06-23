@@ -1,5 +1,5 @@
 import crypto from "crypto"
-import WebSocketServer from "ws"
+import { WebSocketServer } from "ws"
 
 function randomBytes(l) {
     return crypto.randomBytes(l).toString("base64url")
@@ -162,7 +162,7 @@ export class Client {
 
 };
 
-function defaultHandler(client = new Client()) { }
+export function defaultHandler(client = new Client()) { }
 
 export function createServer({ port = 8080 }, handler = defaultHandler) {
     return new WebSocketServer({ port })
