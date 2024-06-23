@@ -165,7 +165,7 @@ export class Client {
 function defaultHandler(client = new Client()) { }
 
 export function createServer({ port = 8080 }, handler = defaultHandler) {
-    new WebSocketServer({ port })
+    return new WebSocketServer({ port })
         .on("connection",
             socket => handler(new Client(socket))
         )
