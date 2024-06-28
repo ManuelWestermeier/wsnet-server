@@ -1,6 +1,6 @@
 {
   "name": "wsnet-server",
-  "version": "1.0.8",
+  "version": "1.0.10",
   "description": "A fast realtime websocket framework",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,9 @@
   "license": "ISC",
   "dependencies": {
     "ws": "latest"
+  },
+  "types": "index.ts",
+  "repository": {
+    "url": "https://github.com/ManuelWestermeier/wsnet-server.git"
   }
 }
