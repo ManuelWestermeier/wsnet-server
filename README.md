@@ -4,20 +4,26 @@
 
 ```js
 import { log } from "console";
-import { createServer } from "WSNET_Framework/_server/index.js";
-const port = 8080;
+import { createServer } from "wsnet-server;
 
-//create the server on port 8080
-createServer({ port }, async (client) => {
-  //get the params
+//create the websocket server on port 8080
+createServer({ port: 8080 }, async (client) => {
+
+  //get the params that are passed by the client
   client.onParams((data) => log(data));
-  //on request the echo key
+  
+  //on get on the "echo" route >> response
   client.onGet("echo", async (data) => {
-    //get resource from client
+    //get resource from client on the clients "echo" route and sent it back
+    //it can be an Error or a object|string|array|...
+    //maybe the client is corrupt and sends some wrong or no response back (don't use it)
+    //if the client hasn't send the response back after 1min it returns an error 
     return await client.get("echo", data);
   });
+  
   //listen for posts and resent them
   client.onSay("echo", (data) => {
+    //resent the data to the client say "echo" route
     client.say("echo", data);
   });
 });
