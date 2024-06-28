@@ -155,8 +155,8 @@ export class Client {
 
     // Other Handlers
 
-    onclose(code: number): void { }
-    onerror(err: any): void { }
+    onclose(code: number): void { code }
+    onerror(err: any): void { err }
     onend(): void { }
 }
 

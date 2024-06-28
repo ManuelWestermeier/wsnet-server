@@ -1,6 +1,6 @@
 {
   "name": "wsnet-server",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "description": "A fast realtime websocket framework",
   "main": "index.js",
   "scripts": {
