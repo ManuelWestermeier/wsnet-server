@@ -4,7 +4,7 @@
 
 ```js
 import { log } from "console";
-import { createServer } from "wsnet-server;
+import { createServer } from "wsnet-server";
 
 //create the websocket server on port 8080
 createServer({ port: 8080 }, async (client) => {
